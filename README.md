@@ -1,4 +1,4 @@
-# [<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_1.png" width="50"/>]() Centralized logging with Kafka and ELK stack
+# <img src="./images/IMG_1.png" width="50"/> Centralized logging with Kafka and ELK stack
 
 ## In this artical , We 'll show how to deploy all the component on using docker to set up Kafka with ELK stack.
  
