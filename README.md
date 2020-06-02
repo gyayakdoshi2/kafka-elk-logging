@@ -14,7 +14,7 @@ In real world any production incident soon turn scary when you have to go throug
 
 
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_2.png" width="900"/>]
+<img src="./images/IMG_2.png" width="900"/>]
 
 # System Requirement
 * CPUs: 4 Core
@@ -25,7 +25,7 @@ In real world any production incident soon turn scary when you have to go throug
 
 
 
-# [<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_3.png" width="50"/>]() Kafka & Kafka Manager Docker Configuration
+# [<img src="./images/IMG_3.png" width="50"/>]() Kafka & Kafka Manager Docker Configuration
 
 There are two projects with the Docker images for the components that seem to have been trusted the most:
 
@@ -88,7 +88,7 @@ In the  `docker-compose.yml` it can be something like this
       ZK_HOSTS: "kafkaserver:2181"
 ```
 
-# [<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_4.png" width="50"/>]() Elasticserach Docker Configuration
+# [<img src="./images/IMG_4.png" width="50"/>]() Elasticserach Docker Configuration
 
 [Elasticsearch](https://hub.docker.com/_/elasticsearch) docker-compose simple configuration in the `docker-compose.yml` something like this
 
@@ -110,7 +110,7 @@ Note: Update host file as below :
 ```
 127.0.0.1 elasticsearch
 ```
-# [<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_5.png" width="35"/>]() Kibana Docker Configuration
+# [<img src="./images/IMG_5.png" width="35"/>]() Kibana Docker Configuration
 
 [Kibana](https://hub.docker.com/_/kibana) docker-compose simple configuration in the    `docker-compose.yml`  something like this
 
@@ -132,7 +132,7 @@ Note: Update host file as below :
     depends_on: ['elasticsearch']
 ```
 
-# [<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_6.png" width="50"/>]() Logstash Docker Configuration'
+# [<img src="./images/IMG_6.png" width="50"/>]() Logstash Docker Configuration'
 
 [Logstash](https://hub.docker.com/_/logstash) docker-compose simple configuration in the    `docker-compose.yml`  something like this
 
@@ -333,7 +333,7 @@ we  are using below meta field  to identify kafka topic for diffrent enviroment.
         - '//C/Users/config-dir:/usr/share/logstash/pipeline/'
 ```
 
-# [<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_7.png" width="35"/>]() Docker Network
+# [<img src="./images/IMG_7.png" width="35"/>]() Docker Network
 
 Docker networking utilizes already existing Linux Kernel Networking features like (iptables, namespaces, bridges etc.).
 With Docker Networking, we can connect various docker images running on same host or across multiple hosts.
@@ -451,7 +451,7 @@ $ docker-compose up
 
 You should see output similar to this one:
 
-[<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_14.png" width="1000"/>](image.png) 
+[<img src="./images/IMG_14.png" width="1000"/>](image.png) 
 
 Open  new terminal window & check status of the containers by invoking:
 
@@ -461,7 +461,7 @@ $ docker-compose ps
 
 You should see output similar to this one:
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_8.png" width="1000"/>
+<img src="./images/IMG_8.png" width="1000"/>
 
 # Let’s ping  Elasticsearch conatiner, by opening
 
@@ -470,7 +470,7 @@ http://localhost:9200/
 ```
 in the browser:
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_24.png" width="500"/>
+<img src="./images/IMG_24.png" width="500"/>
 
 
 
@@ -483,7 +483,7 @@ http://localhost:5601/
 in the browser:
 
 
-[<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_25.png" width="500"/>](image.png) 
+[<img src="./images/IMG_25.png" width="500"/>](image.png) 
 
 # Let’s launch Kafka-Manager, by opening
 
@@ -492,36 +492,36 @@ http://localhost:9000
 ```
 ## in the browser:
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_15.png" width="500"/>
+<img src="./images/IMG_15.png" width="500"/>
 
 ## Click on Cluster & `Add cluster`:
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_16.png" width="500"/>
+<img src="./images/IMG_16.png" width="500"/>
 
 ## Provide below details & click on `Save`:
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_17.png" width="500"/>
+<img src="./images/IMG_17.png" width="500"/>
 
 
 ## Click on `Go to cluster view` :
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_18.png" width="500"/>
+<img src="./images/IMG_18.png" width="500"/>
 
 ## Click on `kafka_cluster`:
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_19.png" width="500"/>
+<img src="./images/IMG_19.png" width="500"/>
 
 ## Click on `Topic` to `Create` topic
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_21.png" width="500"/>
+<img src="./images/IMG_21.png" width="500"/>
 
 ## Create topic `sit.catalogue.item`
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_22.png" width="500"/>
+<img src="./images/IMG_22.png" width="500"/>
 
 ## Create topic `uat.catalogue.item`
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_35.png" width="500"/>
+<img src="./images/IMG_35.png" width="500"/>
 
 
 
@@ -581,7 +581,7 @@ $ ./kafka-console-producer.sh --broker-list kafkaserver:9092 --topic sit.catalog
 ## WARN
 {"app":"catalogue-item","crid":"1BFXCD","uuid":"ec25cdc8-a336-11ea-bb37-0242ac130002","msg":"Create Catlogue PayLoad - {'sku':'CTLG-123-0001','name':'The Avengers','description':'Marvel's The Avengers Movie','category':'Movies','price':0,'inventory':0}","status":"WARN","latency":"1","source":"Postman API Client","destination":"Catalogue DataBase","time_stamp":"2020-05-31T13:22:10.120Z"}
 ```
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_26.png" width="1000"/>
+<img src="./images/IMG_26.png" width="1000"/>
 
 
 # Create Index in Kibana
@@ -595,33 +595,33 @@ http://localhost:5601/
 * Click `Management` on side navigation bar.
 * Click on `Index Patterns`
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_27.png" width="1000"/>
+<img src="./images/IMG_27.png" width="1000"/>
 
 * It will navigate to blow Screen
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_28.png" width="1000"/>
+<img src="./images/IMG_28.png" width="1000"/>
 
 * Create index pattern for `sit` logs
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_29.png" width="1000"/>
+<img src="./images/IMG_29.png" width="1000"/>
 
 * Configure Settings
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_30.png" width="1000"/>
+<img src="./images/IMG_30.png" width="1000"/>
 
 * If Index created sucessfully will navigate to blow screen
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_31.png" width="1000"/>
+<img src="./images/IMG_31.png" width="1000"/>
 
 * Click `Discover` on side navigation bar
 
 *  Logs avaibale in kibana with the index created
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_33.png" width="1000"/>
+<img src="./images/IMG_33.png" width="1000"/>
 
 * Visualize Messgae in tabular format
 
-<img src="/Users/gyayakdoshi/Downloads/ELK+KAFKA/images/IMG_34.png" width="1000"/>
+<img src="./images/IMG_34.png" width="1000"/>
 
 # Conclusion
 If you had made up to this point :- congratulations ! You have successfully dockerized the ELK stack with Kafka.
